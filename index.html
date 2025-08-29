@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="ja" class="vwready">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>（仮）高輪ゲートウェイクリニック　内科・人間ドック</title>
+    <meta name="description" content="高輪ゲートウェイクリニックは、東京都港区に位置する革新的な予防医療クリニックです。腸内細菌叢検査を通じた健康管理で、100年先の心豊かな暮らしを実現します。">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: ui-serif, "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", "MS PMincho", serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            font-size: 16px;
+            background: #ffffff;
+        }
+
+        .wrapper__container {
+            padding-top: 0;
+        }
+
+
+
+
+
+
+        .header__logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header__logo a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .header__logo a:hover {
+            transform: scale(1.05);
+        }
+
+        .header__logo__symbol {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header__logo__symbol img {
+            width: 80px !important;
+            height: 80px !important;
+            object-fit: contain;
+        }
+
+        .header__logo__text {
+            display: flex;
+            flex-direction: column;
+            color: #004080;
+            font-weight: 700;
+            text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+        }
+
+        .header__logo__text__line1 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header__logo__text__line2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+
+
+        .header__logo img {
+            height: 32px;
+            width: auto;
+        }
+
+        .header__nav__list {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .header__nav__list__link {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .header__nav__list__link:hover {
+            color: #0066cc;
+        }
+
+        .header__nav__list__link.current {
+            color: #0066cc;
+        }
+
+        .header__menu {
+            display: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            color: white;
+            text-align: center;
+        }
+
+        .hero__bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+        }
+
+        .hero__bg__video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+
+
+        .hero__container {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .hero__logo {
+            margin-bottom: 60px;
+        }
+
+        .hero__logo__image {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            transition: all 0.3s ease;
+        }
+
+        .hero__logo__image:hover {
+            transform: scale(1.1);
+        }
+
+        .hero__catch__main {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero__catch__sub {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.4;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero__catch__lead {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #666;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .hero__cta {
+            text-align: center;
+        }
+
+        .hero__cta__btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #1a1a1a, #004080);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 64, 128, 0.3);
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+
+        .hero__cta__btn:hover {
+            background: linear-gradient(135deg, #004080, #1a1a1a);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 64, 128, 0.4);
+        }
+
+        .rectbtn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .rectbtn:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+        }
+
+        .rectbtn--wh {
+            background: white;
+            color: #0066cc;
+            border: 2px solid white;
+        }
+
+        .rectbtn--wh:hover {
+            background: transparent;
+            color: white;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+            background: #ffffff;
+            margin: 0;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section__title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+            font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+            line-height: 1.2;
+        }
+
+        .section__title__en {
+            text-align: center;
+            color: #004080;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        /* News Section */
+        .news {
+            background: #f8f9fa;
+        }
+
+        .news__list {
+            list-style: none;
+            display: grid;
+            gap: 20px;
+        }
+
+        .news__item {
+            background: white;
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .news__item__date {
+            color: #666;
+            font-size: 0.9rem;
+            min-width: 100px;
+        }
+
+        .news__item__title {
+            font-weight: 500;
+        }
+
+        /* About Section */
+        .about__catch {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.3;
+            color: #004080;
+        }
+
+        .about__text {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about__mission {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about__mission__item {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .about__mission__item h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .about__mission__item p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        .about__video {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about__video__title {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .about__video__player {
+            position: relative;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        .about__video__player__video {
+            width: 100%;
+            height: auto;
+        }
+
+        .about__video__player__thumb {
+            position: relative;
+            aspect-ratio: 16/9;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about__video__player__btn {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: none;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .about__video__player__btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .about__foot,
+        .news__foot,
+        .company__foot,
+        .recruit__foot {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Business Section */
+        .business__list {
+            display: grid;
+            gap: 40px;
+        }
+
+        .business__list__item {
+            background: #ffffff;
+            padding: 40px;
+            border: 1px solid #e9ecef;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .business__list__item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 102, 204, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .business__list__item:hover::before {
+            left: 100%;
+        }
+
+        .business__list__item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .business__list__item__num {
+            color: #004080;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 3rem;
+            text-align: center;
+            display: block;
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            border: none;
+        }
+
+        .business__list__item__title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+            text-align: center;
+        }
+
+        .business__list__item__text {
+            margin-bottom: 30px;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* Works Section */
+        .works {
+            background: #ffffff;
+        }
+
+        .works__slider__track {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project__item {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border-radius: 0;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .project__item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project__item__image {
+            height: 200px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .project__item__image img {
+            transition: all 0.3s ease;
+        }
+
+        .project__item:hover .project__item__image img {
+            transform: scale(1.05);
+        }
+
+        .project__item__content {
+            padding: 30px;
+        }
+
+        .project__item__title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .project__item__text {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Company and Recruit Sections */
+        .company,
+        .recruit {
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .company__catch,
+        .recruit__catch {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            text-align: center;
+            color: #004080;
+        }
+
+        .company__text,
+        .recruit__text {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .company__logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .company__logo a {
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .company__logo__image {
+            max-width: 200px;
+            height: auto;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+        }
+
+        .company__logo a:hover .company__logo__image {
+            transform: scale(1.05);
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .footer__info {
+            background: linear-gradient(135deg, #004080, #003366);
+            padding: 40px 0;
+        }
+
+        .footer__info__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .footer__info__block__title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .footer__info__block__email {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .footer__info__block__email a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer__info__block__email a:hover {
+            text-decoration: underline;
+            color: #ffd700;
+            transition: color 0.3s ease;
+        }
+
+        .footer__info__block__note {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .footer__info__block__btn {
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .footer__main {
+            padding: 60px 0 40px;
+        }
+
+        .footer__main__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .footer__catch {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .footer__text {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .footer__logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .footer__logo__image {
+            max-width: 150px;
+            height: auto;
+            filter: brightness(0) invert(1);
+            transition: all 0.3s ease;
+        }
+
+        .footer__logo__image:hover {
+            transform: scale(1.05);
+            filter: brightness(0) invert(1) drop-shadow(0 4px 8px rgba(255, 255, 255, 0.3));
+        }
+
+        .footer__nav__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer__nav__list__link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer__nav__list__link:hover {
+            color: #0066cc;
+        }
+
+        .footer__subnav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer__subnav__link {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer__small {
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero__catch__main {
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+            }
+
+            .hero__catch__sub {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+
+            .hero__catch__lead {
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+
+            .hero__cta__btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+
+            .section__title {
+                font-size: 2.5rem;
+            }
+
+            .about__catch,
+            .company__catch,
+            .recruit__catch {
+                font-size: 2rem;
+            }
+
+            .about__mission__item h3 {
+                font-size: 1.2rem;
+            }
+
+            .about__mission__item p {
+                font-size: 0.95rem;
+            }
+
+            .company__logo__image {
+                max-width: 150px;
+            }
+
+            .footer__logo__image {
+                max-width: 120px;
+            }
+
+            .footer__catch {
+                font-size: 1.4rem;
+            }
+
+            .hero__container {
+                padding: 0 15px;
+            }
+
+            .section__container {
+                padding: 0 15px;
+            }
+
+            .hero__logo__image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body class="siteReady">
+    <div id="wrapper">
+        <div class="wrapper__container">
+
+
+            <main class="main">
+                <section class="hero">
+                    <div class="hero__bg">
+                        <video class="hero__bg__video" autoplay muted loop playsinline>
+                            <source src="hero.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="hero__container">
+                        <div class="hero__logo">
+                            <img src="創青会ロゴ.png" alt="医療法人社団創青会" class="hero__logo__image">
+                        </div>
+                        <div class="hero__catch">
+                            <div class="hero__catch__main">医療を、「治療」から「未病」へ。</div>
+                            <div class="hero__catch__sub"></div>
+
+                            <div class="hero__cta">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+                <section class="about section" id="about">
+                    <div class="section__container">
+                        <div class="about__head">
+                            <h2 class="section__title">私たちの使命 - Our Mission</h2>
+                            <div class="section__title__en">Our Mission</div>
+                        </div>
+                        <div class="about__body">
+                            <div class="about__catch">
+                                「治療」から、「健康維持」の時代へ。
+                            </div>
+                            <div class="about__text">
+                                従来の医療は「治療」が中心でした。<br>
+                                これからの時代に重要なのは、病気にならないこと、すなわち「健康の維持」です。
+                            </div>
+                            <div class="about__mission">
+                                <div class="about__mission__item">
+                                    <h3>「未病」を知り、病気を防ぐ。</h3>
+                                    <p>健康と病気の間にある状態が「未病」です。<br>私たちはこの「未病」段階で身体の状態を可視化し、病気を未然に防ぎます。</p>
+                                </div>
+                                <div class="about__mission__item">
+                                    <h3>病気と闘うのではなく、健やかさを育む。</h3>
+                                    <p>それが私たちの医療です。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="business section">
+                    <div class="section__container">
+                        <div class="business__head">
+                            <h2 class="section__title">プロジェクトについて - About the Project</h2>
+                            <div class="section__title__en">About the Project</div>
+                        </div>
+                        <div class="business__body">
+                            <div class="business__list">
+                                <div class="business__list__item">
+                                    <div class="business__list__item__num">（ 01 ）</div>
+                                    <div class="business__list__item__title">腸内細菌で、「未病」を知る。</div>
+                                    <div class="business__list__item__text">
+                                        事業の核は、検便による<strong>「腸内細菌叢（ちょうないさいきんそう）検査」</strong>です。
+                                    </div>
+                                </div>
+                                <div class="business__list__item">
+                                    <div class="business__list__item__num">（ 02 ）</div>
+                                    <div class="business__list__item__title">データが示す、最適な生活習慣。</div>
+                                    <div class="business__list__item__text">
+                                        腸内細菌は「第二の脳」。心身の状態を映し出します。<br>これを解析すれば、健康リスクと、あなたに最適な生活習慣が見えてきます。
+                                    </div>
+                                </div>
+                                <div class="business__list__item">
+                                    <div class="business__list__item__num">（ 03 ）</div>
+                                    <div class="business__list__item__title">結果はアプリで可視化し、具体的なアドバイスを提供。</div>
+                                    <div class="business__list__item__text">
+                                        これが私たちのパーソナル予防医療です。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="works section">
+                    <div class="section__container">
+                        <div class="works__head">
+                            <h2 class="section__title">スマート健康ステーション</h2>
+                            <div class="section__title__en">Smart health station</div>
+                        </div>
+                        <div class="works__body">
+                            <div class="works__slider">
+                                <div class="works__slider__track">
+                                    <a href="https://nishikoku.aoiclinic.net/" target="_blank" class="project__item">
+                                        <div class="project__item__image">
+                                            <img src="nishikoku-clinic.jpg" alt="あおいクリニック -駅ホーム西国分寺-" width="100%"
+                                                height="100%" style="object-fit: cover;">
+                                        </div>
+                                        <div class="project__item__content">
+                                            <div class="project__item__title">あおいクリニック-駅ホーム西国分寺-</div>
+                                            <div class="project__item__text">JR東日本中央線西国分寺駅。世界初のホーム上にあるクリニック
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a href="https://asagaya.aoiclinic.net/" target="_blank" class="project__item">
+                                        <div class="project__item__image">
+                                            <img src="asagaya-clinic.jpg" alt="あおい内科 -エキナカ・ビーンズ阿佐ヶ谷-" width="100%"
+                                                height="100%" style="object-fit: cover;">
+                                        </div>
+                                        <div class="project__item__content">
+                                            <div class="project__item__title">あおい内科-エキナカ・ビーンズ阿佐ヶ谷-</div>
+                                            <div class="project__item__text">JR阿佐ヶ谷駅の「みどりの窓口」跡を日本で初めて内科クリニックとして開院</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="company section">
+                    <div class="section__container">
+                        <div class="company__head">
+                            <h2 class="section__title">医療法人情報</h2>
+                            <div class="section__title__en">Medical Corporation</div>
+                        </div>
+                        <div class="company__body">
+                            <div class="company__logo">
+                                <a href="https://www.souseikai-med.com/" target="_blank" rel="noopener noreferrer">
+                                    <img src="創青会ロゴ.png" alt="医療法人社団創青会" class="company__logo__image">
+                                </a>
+                            </div>
+                            <div class="company__catch">
+                                受診できないを受診できる未来へ<br>
+                                新しい医療のカタチを創造する
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="recruit section">
+                    <div class="section__container">
+                        <div class="recruit__head">
+                            <h2 class="section__title">採用情報</h2>
+                            <div class="section__title__en">Recruit</div>
+                        </div>
+                        <div class="recruit__body">
+                            <div class="recruit__catch">
+                                <a href="https://tgc-hp.vercel.app/" target="_blank" class="recruit__catch__btn"
+                                    style="display:inline-block; background:linear-gradient(135deg, #1a1a1a, #004080); color:#fff; padding:18px 36px; border-radius:32px; font-size:1.3rem; font-weight:700; text-decoration:none; box-shadow:0 8px 24px rgba(0,0,0,0.18), 0 1.5px 6px rgba(0,64,128,0.12); transition:transform 0.2s, box-shadow 0.2s; margin:0 auto; text-align:center;">
+                                    新しい医療のカタチを<br>共に創造しませんか?
+                                
+
+                                </a>
+                                <style>
+                                    .recruit__catch__btn:hover {
+                                        transform: translateY(-4px) scale(1.04);
+                                        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22), 0 3px 12px rgba(0, 64, 128, 0.16);
+                                        background: linear-gradient(135deg, #004080, #1a1a1a);
+                                    }
+                                </style>
+                            </div>
+                            <div class="recruit__text">
+                                患者様の健康と幸せを第一に考え、社会課題の解決に情熱を持って取り組む、<br>
+                                プロフェッショナルを求めています。
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="footer__info">
+                    <div class="footer__info__container">
+                        <div class="footer__info__block">
+                            <div class="footer__info__block__title">お問い合わせ</div>
+                            <div class="footer__info__block__email">
+                                <a href="mailto:recruit_aoi@souseikai.co.jp">recruit_aoi@souseikai.co.jp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__main">
+                    <div class="footer__main__container">
+                        <div class="footer__catch">100年先の医療を、今ここから</div>
+                        <div class="footer__text">
+                            高輪ゲートウェイシティから始まる革新的な健康都市プロジェクト。<br>
+                            私たちが目指すのは、健康寿命の延長、企業の労働生産性向上、そして健康格差の解消です。
+                        </div>
+                        <div class="footer__logo">
+                            <img src="創青会ロゴ.png" alt="医療法人社団創青会" class="footer__logo__image">
+                        </div>
+                        <small class="footer__small">© （仮）高輪ゲートウェイクリニック　 内科・人間ドック All Rights Reserved.</small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // サイト初期化
+        document.addEventListener('DOMContentLoaded', function () {
+            // HTMLにreadyクラスを追加
+            document.documentElement.classList.add('vwready');
+            document.body.classList.add('siteReady');
+
+            // スクロールアニメーション
+            const sections = document.querySelectorAll('.section');
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+
+            // 動画プレイヤーの初期化
+            const videoBtn = document.querySelector('.about__video__player__btn');
+            if (videoBtn) {
+                videoBtn.addEventListener('click', function () {
+                    alert('動画を再生します（実装例）');
+                });
+            }
+
+            // スムーズスクロール
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>
