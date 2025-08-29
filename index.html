@@ -485,6 +485,78 @@
             text-align: center;
         }
 
+        .business__list__item__image {
+            margin: 20px 0;
+            text-align: center;
+            background: transparent;
+        }
+
+        .business__list__item__image__container {
+            position: relative;
+            display: inline-block;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .business__list__item__image__img {
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            box-shadow: none;
+            background: transparent;
+        }
+
+        .business__list__item__image__labels {
+            position: absolute;
+            top: -25px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .business__list__item__image__label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .business__list__item__image__label--health {
+            color: #28a745;
+        }
+
+        .business__list__item__image__label--mibyo {
+            color: #ffc107;
+        }
+
+        .business__list__item__image__label--sick {
+            color: #dc3545;
+        }
+
+        .business__list__item__image__label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #004080;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .business__list__item__image__label--health {
+            color: #28a745;
+        }
+
+        .business__list__item__image__label--mibyo {
+            color: #ffc107;
+        }
+
+        .business__list__item__image__label--sick {
+            color: #dc3545;
+        }
+
         .business__conclusion {
             margin-top: 60px;
             padding: 40px;
@@ -875,9 +947,9 @@
                                 治療(Cure)から、予防(Care)の時代へ。
                             </div>
                             <div class="about__text">
-                                「病気になったら治す」という常識を、過去にする。<br>
+                                「病気になったら治す」という常識を過去にする。<br>
                                 健康と病気は、白か黒ではありません。<br>
-                                その間にある「未病」というグラデーションにこそ、<br>
+                                その間にある「未病」というグラデーションにこそ<br>
                                 一人ひとりの未来を豊かにする鍵があります。
                             </div>
                             <div class="about__mission">
@@ -903,7 +975,21 @@
                                     <div class="business__list__item__title">健康を、スペクトラムで捉える。</div>
                                     <div class="business__list__item__text">
                                         健康から病気へは、突然移行するのではありません。<br>
-                                        しなやかな血管が動脈硬化へ、正常な血糖値が糖尿病へと至る、<br>
+                                        <br>
+                                        <div class="business__list__item__image">
+                                            <div class="business__list__item__image__container">
+                                                <div class="business__list__item__image__labels">
+                                                    <span
+                                                        class="business__list__item__image__label business__list__item__image__label--health">Health</span>
+                                                    <span
+                                                        class="business__list__item__image__label business__list__item__image__label--mibyo">Mibyo</span>
+                                                    <span
+                                                        class="business__list__item__image__label business__list__item__image__label--sick">Sick</span>
+                                                </div>
+                                                <img src="mibyou.png" alt="未病のグラデーション"
+                                                    class="business__list__item__image__img">
+                                            </div>
+                                        </div>
                                         その手前のサインである「未病」の段階から、私たちは向き合います。
                                     </div>
                                 </div>
@@ -912,15 +998,15 @@
                                     <div class="business__list__item__title">「自分ごと」にする健康体験を。</div>
                                     <div class="business__list__item__text">
                                         「受けっぱなし」になりがちな画一的な健診を変革します。<br>
-                                        生活習慣と疾病リスクの関わりを対話を通じて明らかにし、<br>
+                                        生活習慣と疾病リスクの関わりを対話を通じて明らかにし<br>
                                         あなた主体の行動変容を支援する「健康増進型」の健診を提供します。
                                     </div>
                                 </div>
                                 <div class="business__list__item">
                                     <div class="business__list__item__num">03</div>
-                                    <div class="business__list__item__title">分断しない、ヘルスケア体験。</div>
+                                    <div class="business__list__item__title">分断しないヘルスケア体験。</div>
                                     <div class="business__list__item__text">
-                                        「要精密検査」で、立ち止まらない。<br>
+                                        「要精密検査」で立ち止まらない。<br>
                                         健診と医療の垣根を取り払い、検査から診断、そして予防的介入までを<br>
                                         一つのスムーズな流れで提供します。<br>
                                         発見のその先まで、あなたの健康を一貫してサポートします。
@@ -930,7 +1016,7 @@
                             <div class="business__conclusion">
                                 <div class="business__conclusion__title">新たな挑戦の舞台へ - A NEW STAGE</div>
                                 <div class="business__conclusion__text">
-                                    私たちの使命を形にする挑戦の舞台は、<br>
+                                    私たちの使命を形にする挑戦の舞台は<br>
                                     未来への玄関口、高輪ゲートウェイ。<br><br>
                                     ここで私たちが核として着目するのが、<br>
                                     一人ひとりの健康を映し出す鏡、「腸内細菌」です。
@@ -986,7 +1072,7 @@
                 <section class="company section">
                     <div class="section__container">
                         <div class="company__head">
-                            <h2 class="section__title">医療法人情報</h2>
+                            <h2 class="section__title">法人情報</h2>
                             <div class="section__title__en">Medical Corporation</div>
                         </div>
                         <div class="company__body">
